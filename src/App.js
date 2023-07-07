@@ -1,24 +1,18 @@
-import React, { Component, useState } from "react";
+// App.js
+
+import React, { Component } from "react";
+import Overview from "./components/Overview";
+import uniqid from "uniqid";
+import {useState} from "react"
 
 export default function App() {
-  const{info, setinfo} = useState;
+
+  const[newItem, setNewItem] = useState("")
 
 
-  
-
- 
-  
-  
-  
-  
-  return(
-     <div>
-     <form className="resumeForm">
-      <label htmlFor="Name">Name</label>
-      <input value={info} onChange={e => setinfo(e.target.value)} type="text" id="info"/>
-     </form>
-     <h1>{info}</h1>
-     </div>
+  return (
+    <>
+    <input value={newItem} onChange={e => setNewItem(e.target.value) }></input>
+    </>
   )
 }
-
